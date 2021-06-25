@@ -1,0 +1,14 @@
+.toDoItemDiv {
+    align-items: center;
+    display: flex;
+    height: 30px;
+}
+
+.checkbox {
+    height: 18px;
+    width: 18px;
+}
+
+.toDoItem {
+    font-size: 20px;
+}

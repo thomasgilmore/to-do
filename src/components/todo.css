@@ -7,5 +7,42 @@ form {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    margin-left: 48%;
+    justify-content: center;
+    justify-self: center;
+}
+
+@media (min-width: 200px) {
+    .toDoDiv {
+        margin-left: 42%;
+    }
+}
+
+@media (min-width: 300px) {
+    .toDoDiv {
+        margin-left: 43%;
+    }
+}
+
+@media (min-width: 400px) {
+    .toDoDiv {
+        margin-left: 44%;
+    }
+}
+
+@media (min-width: 500px) {
+    .toDoDiv {
+        margin-left: 45%;
+    }
+}
+
+@media (min-width: 600px) {
+    .toDoDiv {
+        margin-left: 46%;
+    }
+}
+
+@media (min-width: 800px) {
+    .toDoDiv {
+        margin-left: 47%;
+    }
 }

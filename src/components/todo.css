@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    justify-content: center;
+}
+
+.toDoDiv {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 48%;
+}

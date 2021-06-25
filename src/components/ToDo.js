@@ -14,19 +14,23 @@ export default class ToDo extends Component {
         this.handleChange = this.handleChange.bind(this);
         this.addClicked = this.addClicked.bind(this);
     }
-
+    // Sets this.state.inputValue to the input value onChange
     handleChange(e) {
         this.setState({ inputValue: e.target.value });
     }
-
+    // On form submit / add button clicked
     addClicked(e) {
         e.preventDefault();
+        // get current set of to dos
         let temptoDos = this.state.toDos;
         const newToDoItem = <ToDoItem key={this.state.key} itemNumber={this.state.key} toDo={this.state.inputValue} />
-        // toDos.push(this.state.inputValue);
+        // adding the new to do item element to the array with previous to dos 
         temptoDos.push(newToDoItem);
+        // increasing the key by 1 so no element has the same key number
         let newKey = this.state.key + 1;
+        // updating the to dos array with previous and new todos and new key number
         this.setState({ toDos: temptoDos, key: newKey });
+        // setting the input value to empty
         e.target[0].value = '';
     }
 

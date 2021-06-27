@@ -12,3 +12,7 @@
 .toDoItem {
     font-size: 20px;
 }
+
+.removeButton {
+    margin-left: 5px;
+}

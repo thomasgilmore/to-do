@@ -6,6 +6,10 @@ export default function ToDoItem(props) {
         <div className="toDoItemDiv">
             <input type="checkbox" className="checkbox" />
             <p className="toDoItem">{props.toDo}</p>
+            <button onClick={(e) => {
+                props.handleDeleteToDo(props.toDo)
+            }}
+            > remove</button>
         </div>
     )
 }

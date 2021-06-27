@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Heading from './Heading';
 import ToDoItem from './ToDoItem';
-import './todo.css'
+import './todo.css';
 
 export default class ToDo extends Component {
     constructor(props) {

@@ -25,7 +25,8 @@ export default class ToDo extends Component {
         let newTemptToDos = tempToDos.filter((toDo) => {
             if (toDo.props.toDo !== toDoToRemove) {
                 return toDo;
-            }
+            } 
+            return null;
         });
         this.setState({ toDos : newTemptToDos })
     }    

@@ -23,7 +23,7 @@ export default class ToDo extends Component {
     handleDeleteToDo = (toDoToRemove) => {
         let tempToDos = this.state.toDos;
         let newTemptToDos = tempToDos.filter((toDo) => {
-            if (toDo.props.toDo !== toDoToRemove) {
+            if (toDo.props.itemNumber !== toDoToRemove) {
                 return toDo;
             } 
             return null;

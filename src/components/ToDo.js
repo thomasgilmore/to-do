@@ -32,7 +32,7 @@ export default class ToDo extends Component {
         });
         this.setState({ toDos: newTemptToDos })
     } 
-
+    // when the to do is clicked a line-through will be applied to style
     toggleCompleted = (e, complete) => {
         let tempToDos = [...this.state.toDos];
         if (complete === false) {

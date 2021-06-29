@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <button className="mainButton" onClick={changeFuncational}>{isFunctional ? 'Change to Class Component' : 'Change to Functional Component'}</button>
+      <button className="mainButton" onClick={changeFuncational}>{isFunctional ? 'Change to React Class Component' : 'Change to React Functional Component'}</button>
       {isFunctional ? <ToDoFunctional /> : <ToDo />}
     </div>
   );

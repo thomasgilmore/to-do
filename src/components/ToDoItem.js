@@ -4,8 +4,9 @@ import './todoitem.css';
 export default function ToDoItem(props) {
     return (
         <div className="toDoItemDiv">
-            <input type="checkbox" className="checkbox" />
-            <p className="toDoItem">{props.toDo}</p>
+            <p id={props.itemNumber} className="toDoItem" onClick={(e) => {
+                props.toggleCompleted(e, props.complete)
+            }}>{props.toDo}</p>
             <button className="removeButton" onClick={(e) => {
                 props.handleDeleteToDo(props.itemNumber)
             }}

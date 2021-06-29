@@ -21,7 +21,7 @@ export default class ToDo extends Component {
     handleChange(e) {
         this.setState({ inputValue: e.target.value });
     }
-    // removes  the to do from the array
+    // removes the to do from the array
     handleDeleteToDo = (toDoToRemove) => {
         let temptoDos = this.state.toDos;
         let newTemptToDos = temptoDos.filter((toDo) => {

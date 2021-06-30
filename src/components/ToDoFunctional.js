@@ -52,11 +52,13 @@ export default function ToDoFunctional() {
     // On form submit / add button clicked
     const addClicked = (e) => {
         e.preventDefault();
-        if (e.target[0].value !== '') {
+        let str = e.target[0].value;
+        let toDoItem = str.replace(/^\s+|\s+$/g, '');
+        if (toDoItem !== '') {
             // get current set of to dos
             let temptoDos = toDos;
             let newtoDo = {
-                ToDoItem: e.target[0].value,
+                ToDoItem: toDoItem,
                 key: key,
                 complete: false
             }
@@ -68,8 +70,8 @@ export default function ToDoFunctional() {
             setToDos(temptoDos);
             setKey(newKey);
             // setting the input value to empty
-            e.target[0].value = '';
-        }
+        } 
+        e.target[0].value = '';  
     }
     return (
         <div>

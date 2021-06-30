@@ -61,11 +61,13 @@ export default class ToDo extends Component {
     // On form submit / add button clicked
     addClicked(e) {
         e.preventDefault();
-        if (e.target[0].value !== '') {
+        let str = e.target[0].value;
+        let toDoItem = str.replace(/^\s+|\s+$/g, '');
+        if (toDoItem !== '') {
             // get current set of to dos
             let temptoDos = this.state.toDos;
             let newtoDo = {
-                ToDoItem: e.target[0].value,
+                ToDoItem: toDoItem,
                 key: this.state.key,
                 complete: false
             }
@@ -76,8 +78,9 @@ export default class ToDo extends Component {
             // updating the to dos array with previous and new todos and new key number
             this.setState({ key: newKey, toDos: temptoDos });
             // setting the input value to empty
-            e.target[0].value = '';
         }
+        e.target[0].value = '';
+
     }
 
     render() {
